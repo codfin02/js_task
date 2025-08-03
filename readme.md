@@ -1,6 +1,4 @@
-# Mini Project 과제 제출
-
-두 가지 Mini Project를 제출합니다.
+# js_task
 
 ---
 
