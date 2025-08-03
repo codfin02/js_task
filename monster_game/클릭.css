@@ -1,0 +1,72 @@
+/* 기본 레이아웃 */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #6b8ce3, #a3cef1);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* 컨트롤 패널 */
+#controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+#scoreBoard {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255,255,255,0.2);
+  border-radius: 8px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+#startBtn {
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #ff6b6b;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+#startBtn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+#startBtn:hover:not(:disabled) {
+  background: #ff4c4c;
+}
+
+/* 게임 영역 */
+#gameArea {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  background: #fff;
+  border: 4px solid #4a6cf7;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.monster {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: url('https://i.imgur.com/O6aQWJP.png') no-repeat center/contain;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.monster:hover {
+  transform: scale(1.1);
+}
